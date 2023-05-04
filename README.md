@@ -10,5 +10,5 @@ Functionality
 * User authentication PopUps (Google and GitHub), allowing users to log in without registration hassle.
 * Ability for users to mark recipes as favorites
 
-### Live Link: 
+### Live Link: https://melodic-kangaroo-74acfc.netlify.app/
 
