@@ -10,6 +10,8 @@ import Home from '../components/Pages/Home/Home';
 import ChefDetails from '../components/Pages/ChefDetails/ChefDetails';
 import ErrorPage from '../components/Pages/ErrorPage/ErrorPage';
 import Blog from '../components/Pages/Blog/Blog';
+import AuthRoute from './AuthRoute';
+import PrivateRoute from './PrivateRoute';
 
 
 export const router = createBrowserRouter([
@@ -28,7 +30,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/chef/:id',
-                element: <ChefDetails></ChefDetails>,
+                element: <PrivateRoute><ChefDetails></ChefDetails></PrivateRoute>,
                 loader: ({params}) => fetch(`https://gustoso-recipes-server-rionelxslovesky.vercel.app/chefrecipes/${params.id}`)
             }
         ]
@@ -39,11 +41,11 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/auth/login',
-                element: <Login></Login>
+                element: <AuthRoute><Login></Login></AuthRoute>
             },
             {
                 path: '/auth/register',
-                element: <Registration></Registration>
+                element: <AuthRoute><Registration></Registration></AuthRoute>
             }
         ]
     },
