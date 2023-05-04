@@ -1,5 +1,6 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import Selected from '../Selected/Selected';
 
 const RecipesTable = ({ recipes }) => {
     return (
@@ -10,6 +11,7 @@ const RecipesTable = ({ recipes }) => {
                     <th>Ingredients</th>
                     <th>Cooking Method</th>
                     <th>Ratings</th>
+                    <th>Favorite</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,6 +22,7 @@ const RecipesTable = ({ recipes }) => {
                             <td>{recipe.ingredients}</td>
                             <td>{recipe.cooking_method}</td>
                             <td>{recipe.rating}</td>
+                            <td><Selected></Selected></td>
 
                         </tr>)
                 }
