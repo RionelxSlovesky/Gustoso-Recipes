@@ -4,12 +4,15 @@ import Col from 'react-bootstrap/Col';
 import './ChefCard.css'
 import Button from 'react-bootstrap/esm/Button';
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazy-load';
 
-const ChefCard = ({chef}) => {
+const ChefCard = ({ chef }) => {
     return (
         <Col>
             <Card>
-                <Card.Img variant="top" src={chef.img}  className='chef-img'/>
+                <LazyLoad>
+                    <Card.Img variant="top" src={chef.img} className='chef-img' />
+                </LazyLoad>
                 <Card.Body>
                     <Card.Title>{chef.name}</Card.Title>
                     <Card.Text>
