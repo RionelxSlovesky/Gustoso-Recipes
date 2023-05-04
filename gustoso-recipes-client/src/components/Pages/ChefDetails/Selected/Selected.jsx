@@ -6,12 +6,15 @@ import 'react-toastify/dist/ReactToastify.css';
 const Selected = () => {
 
     const [selected, setSelected] = useState(false)
-    const notify = () => toast("Already added to favorites!");
-
+    const notify = () => toast("Added to favorites!");
+    const handleFavorite = () => {
+        setSelected(true)
+        notify()
+    }
     return (
         <>
             {
-                selected ? <FaBookmark style={{cursor:'pointer'}} onClick={notify}></FaBookmark> : <FaRegBookmark style={{cursor:'pointer'}} onClick={() => setSelected(true)}></FaRegBookmark>
+                selected ? <FaBookmark style={{cursor:'pointer'}} ></FaBookmark> : <FaRegBookmark style={{cursor:'pointer'}} onClick={handleFavorite}></FaRegBookmark>
             }
             <ToastContainer />
             
