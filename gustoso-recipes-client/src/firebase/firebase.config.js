@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB715GSTVJn3TNIC34AsIxY8ZN7-eeiib4",
-  authDomain: "gustoso-recipes.firebaseapp.com",
-  projectId: "gustoso-recipes",
-  storageBucket: "gustoso-recipes.appspot.com",
-  messagingSenderId: "889849046618",
-  appId: "1:889849046618:web:8b19fb425335beb8ee5a63"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

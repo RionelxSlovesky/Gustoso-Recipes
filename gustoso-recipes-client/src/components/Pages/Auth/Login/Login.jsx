@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Container from 'react-bootstrap/esm/Container';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -8,6 +8,7 @@ import { AuthContext } from '../../../../providers/AuthProvider';
 const Login = () => {
 
     const { signIn, signInWithGoogle, signInWithGitHub } = useContext(AuthContext)
+    const [error, setError] = useState('')
 
     const navigate = useNavigate()
 
@@ -24,7 +25,7 @@ const Login = () => {
                 navigate('/')
             })
             .catch(err => {
-                console.log(err.message)
+                setError(err.message)
             })
 
     }
@@ -37,7 +38,7 @@ const Login = () => {
                 console.log(loggedUser)
                 navigate('/')
             }).catch(err => {
-                console.log(err.message)
+                setError(err.message)
             });
     }
 
@@ -49,7 +50,7 @@ const Login = () => {
                 console.log(loggedUser)
                 navigate('/')
             }).catch(err => {
-                console.log(err.message)
+                setError(err.message)
             });
     }
 
@@ -73,6 +74,11 @@ const Login = () => {
                 <Button variant="primary" type="submit">
                     Login
                 </Button><br />
+
+                <Form.Text className="text-danger">
+                    {error}
+                </Form.Text> <br />
+
                 <Form.Text className="text-muted">
                     Don't have an account? <Link to='/auth/register'>Register!</Link>
                 </Form.Text>
