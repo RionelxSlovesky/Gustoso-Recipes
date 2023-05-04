@@ -12,7 +12,7 @@ const Main_Navbar = () => {
     const { user, loading, logOut } = useContext(AuthContext)
 
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="dark" variant="dark" expand="lg">
             <Container>
                 <Navbar.Brand as={Link} to="/">Gustoso Recipes</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -30,9 +30,9 @@ const Main_Navbar = () => {
 
                                 <Image style={{ width: '2rem', height: '2rem' }} className='me-3' src={user?.photoURL ? user?.photoURL : 'https://i.ibb.co/Y2dtzKF/default-pic.webp'} title={user.displayName} roundedCircle />
 
-                                <Nav.Link className='text-secondary' as={Link} onClick={logOut}>Logout</Nav.Link>
+                                <Nav.Link className='text-light' as={Link} onClick={logOut}>Logout</Nav.Link>
                             </> :
-                            <Nav.Link className='text-secondary' as={Link} to="/auth/login" >Login</Nav.Link>)
+                            <Nav.Link className='text-light' as={Link} to="/auth/login" >Login</Nav.Link>)
                     }
                 </Navbar.Collapse>
             </Container>
