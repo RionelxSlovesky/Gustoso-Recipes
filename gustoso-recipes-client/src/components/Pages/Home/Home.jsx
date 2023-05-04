@@ -1,8 +1,12 @@
 import React from 'react';
 import './Home.css'
 import Chef from './Chef/Chef';
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
+
+    const chefs = useLoaderData();
+
     return (
         <div>
             <section className='hero text-light'>
@@ -14,7 +18,7 @@ const Home = () => {
             </section>
             <section className='my-5'>
                 <h3 className='text-center mb-4'>Our Chefs: </h3>
-                <Chef></Chef>
+                <Chef chefs={chefs}></Chef>
             </section>
             
         </div>
