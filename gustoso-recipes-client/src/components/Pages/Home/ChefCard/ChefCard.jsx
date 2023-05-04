@@ -6,16 +6,12 @@ import Button from 'react-bootstrap/esm/Button';
 import { Link } from 'react-router-dom';
 
 const ChefCard = ({chef}) => {
-    console.log(chef)
     return (
         <Col>
             <Card>
                 <Card.Img variant="top" src={chef.img}  className='chef-img'/>
                 <Card.Body>
                     <Card.Title>{chef.name}</Card.Title>
-                    <Card.Text>
-                        {chef.description}
-                    </Card.Text>
                     <Card.Text>
                         Experience: {chef.experience}
                     </Card.Text>

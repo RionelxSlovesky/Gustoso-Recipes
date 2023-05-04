@@ -17,7 +17,7 @@ const Home = () => {
                 </div>
             </section>
             <section className='my-5'>
-                <h3 className='text-center mb-4'>Our Chefs: </h3>
+                <h3 className='text-center mb-4'>Meet our Chefs </h3>
                 <Chef chefs={chefs}></Chef>
             </section>
             
