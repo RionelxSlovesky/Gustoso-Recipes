@@ -6,13 +6,11 @@ const AuthRoute = ({children}) => {
 
     const {user,loading} = useContext(AuthContext)
 
-    return (
-        <div>
-        {
-            loading || (user ? <Navigate to='/'></Navigate> : children)
-        }
-        </div>
-    );
+    if(loading) {
+        return <h1>Loading</h1>
+    }else {
+        return (user ? <Navigate to='/'></Navigate> : children)
+    }
 };
 
 export default AuthRoute;
