@@ -6,7 +6,7 @@ const History = () => {
     return (
         <Container>
             <h4>The Rich Tradition of Italian Cuisine</h4>
-            <Carousel className='w-50 mx-auto'>
+            <Carousel className='w-50 mx-auto my-3'>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
