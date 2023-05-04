@@ -2,10 +2,12 @@ import React, { useContext, useState } from 'react';
 import Container from 'react-bootstrap/esm/Container';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../../providers/AuthProvider';
 
 const Registration = () => {
+
+    const navigate = useNavigate()
 
     const [error, setError] = useState(null)
     const [termsError, setTermsError] = useState(null)
@@ -43,10 +45,12 @@ const Registration = () => {
                         }).catch((err) => {
                             console.log(err.message)
                         });
+                    
+                        navigate('/')
 
                 })
                 .catch(err => {
-                    console.log(err.message)
+                    setTermsError(err.message)
                 })
 
         }

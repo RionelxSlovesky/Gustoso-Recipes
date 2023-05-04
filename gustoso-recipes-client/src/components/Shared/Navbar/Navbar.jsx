@@ -28,7 +28,7 @@ const Main_Navbar = () => {
                         loading || (user ?
                             <>
 
-                                <Image style={{ width: '2rem', height: '2rem' }} className='me-3' src={user.photoURL} title={user.displayName} roundedCircle />
+                                <Image style={{ width: '2rem', height: '2rem' }} className='me-3' src={user?.photoURL ? user?.photoURL : 'https://i.ibb.co/Y2dtzKF/default-pic.webp'} title={user.displayName} roundedCircle />
 
                                 <Nav.Link className='text-secondary' as={Link} onClick={logOut}>Logout</Nav.Link>
                             </> :
