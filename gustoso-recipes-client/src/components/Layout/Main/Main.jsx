@@ -7,7 +7,7 @@ const Main = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div style={{marginBottom:'60px'}}>
+            <div style={{marginBottom:'56px'}}>
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>

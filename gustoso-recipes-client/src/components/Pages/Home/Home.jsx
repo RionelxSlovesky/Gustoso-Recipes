@@ -3,6 +3,7 @@ import './Home.css'
 import Chef from './Chef/Chef';
 import { useLoaderData } from 'react-router-dom';
 import History from './History/History';
+import ContactUs from './ContactUs/ContactUs';
 
 const Home = () => {
 
@@ -23,6 +24,9 @@ const Home = () => {
             <section className='my-5'>
                 <h3 className='text-center mb-4'>Meet our Chefs </h3>
                 <Chef chefs={chefs}></Chef>
+            </section>
+            <section className='bg-warning py-5'>
+                <ContactUs></ContactUs>
             </section>
             
         </div>
