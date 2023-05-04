@@ -1,12 +1,30 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import ListGroup from 'react-bootstrap/ListGroup';
+import html2canvas from 'html2canvas'
+import jsPDF from 'jspdf'
 
 const Blog = () => {
+
+    const handleDownload = () => {
+        const capture = document.querySelector('.question-answers')
+        html2canvas(capture)
+        .then(canvas => {
+            const imgData = canvas.toDataURL('img/png')
+            const doc = new jsPDF('p', 'mm', 'a4')
+            const componenetWidth = doc.internal.pageSize.getWidth();
+            const componentHeight = doc.internal.pageSize.getHeight();
+            doc.addImage(imgData, 'PNG', 0, 0, componenetWidth, componentHeight);
+            doc.save('Blog.pdf')
+
+        })
+    }
+
     return (
         <Container>
             <h1 className='text-center mt-5 mb-4'>Questions</h1>
-            <ListGroup variant="flush">
+            <Button onClick={handleDownload} className='mb-3 btn-dark'>Download QA</Button>
+            <ListGroup variant="flush" className='question-answers'>
                 <ListGroup.Item>
                     <h5>Q1) Tell us the differences between uncontrolled and controlled components.</h5>
                     <p>A: A controlled component is a component whose value is controlled by React, whereas an uncontrolled component's value is controlled b the DOM</p>
