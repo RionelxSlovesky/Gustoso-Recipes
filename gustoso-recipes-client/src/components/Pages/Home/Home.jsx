@@ -13,9 +13,11 @@ const Home = () => {
         <div>
             <section className='hero text-light'>
                 <div className='hero-content-container'>
-                    <h1>Italian Cuisine</h1>
-                    <h4>The Best In The West</h4>
-                    <p>Italian cuisine is a culinary wonderland, with a rich history and regional diversity that makes it unique. From the aromatic herbs and fresh ingredients to the careful preparation and attention to detail, Italian cuisine captures the essence of Mediterranean flavors. The simplicity of dishes like pizza and pasta belies the complex flavors that arise from the use of fresh, quality ingredients.</p>
+                    <div className='hero-contents'>
+                        <h1 className='mt-5 fs-1 '>Squisite Ricette Italiane</h1>
+                        <h4 className='mb-4 fs-5 text-uppercase text-warning'>The Best In The West</h4>
+                        <p className=''>Italian cuisine is a culinary wonderland, with a rich history and regional diversity that makes it unique. From the aromatic herbs and fresh ingredients to the careful preparation and attention to detail, Italian cuisine captures the essence of Mediterranean flavors.</p>
+                    </div>
                 </div>
             </section>
             <section className='mb-5 text-center bg-warning text-dark p-5'>
