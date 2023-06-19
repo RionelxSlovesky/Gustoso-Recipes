@@ -5,9 +5,11 @@ import Footer from '../../Shared/Footer/Footer';
 
 const Main = () => {
     return (
-        <div>
+        <div className='d-flex flex-column' style={{minHeight:'100vh'}}>
             <Navbar></Navbar>
-            <Outlet></Outlet>
+            <div className='flex-grow-1'>
+                <Outlet></Outlet>
+            </div>
             <Footer></Footer>
         </div>
     );

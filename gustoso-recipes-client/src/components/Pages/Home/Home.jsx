@@ -16,18 +16,18 @@ const Home = () => {
                     <div className='hero-contents'>
                         <h1 className='mt-5 fs-1 '>Squisite Ricette Italiane</h1>
                         <h4 className='mb-4 fs-5 text-uppercase text-warning'>The Best In The West</h4>
-                        <p className=''>Italian cuisine is a culinary wonderland, with a rich history and regional diversity that makes it unique. From the aromatic herbs and fresh ingredients to the careful preparation and attention to detail, Italian cuisine captures the essence of Mediterranean flavors.</p>
+                        <p className='fs-5'>Italian cuisine is a culinary wonderland, with a rich history and regional diversity that makes it unique. It captures the essence of Mediterranean flavors.</p>
                     </div>
                 </div>
             </section>
-            <section className='mb-5 text-center bg-warning text-dark p-5'>
+            <section className='text-center bg-warning text-dark px-4' style={{padding:'8em 0'}}>
                 <History></History>
             </section>
-            <section className='my-5'>
-                <h3 className='text-center mb-4'>Meet our Chefs </h3>
-                <Chef chefs={chefs}></Chef>
+            <section className='meet-chef' style={{padding:'8em 0', position:'relative'}}>
+                <h3 className='text-center fs-2 mb-5' style={{zIndex:'100'}}>Meet Our Chefs</h3>
+                    <Chef chefs={chefs}></Chef>
             </section>
-            <section className='bg-warning py-5'>
+            <section className='bg-warning' style={{padding:'8em 0'}}>
                 <ContactUs></ContactUs>
             </section>
             

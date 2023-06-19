@@ -18,8 +18,8 @@ const Main_Navbar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
-                        <Nav.Link as={Link} to="/" >Home</Nav.Link>
-                        <Nav.Link as={Link} to="/blog" >Blog</Nav.Link>
+                        <Nav.Link className='text-light' as={Link} to="/" >Home</Nav.Link>
+                        <Nav.Link className='text-light' as={Link} to="/blog" >Blog</Nav.Link>
 
                     </Nav>
                 </Navbar.Collapse>

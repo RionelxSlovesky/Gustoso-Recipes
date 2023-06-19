@@ -6,11 +6,11 @@ import Container from 'react-bootstrap/esm/Container';
 const Chef = ({chefs}) => {
     return (
         <Container>
-            <Row xs={1} md={2} className="g-4">
+            <div className='d-flex flex-wrap justify-content-center gap-5'>
             {
                 chefs.map(chef => <ChefCard key={chef.id} chef={chef}></ChefCard>)
             }
-            </Row>
+            </div>
         </Container>
     );
 };

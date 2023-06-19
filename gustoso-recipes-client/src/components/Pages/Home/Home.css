@@ -1,6 +1,7 @@
 
 .hero {
     background-image: url('https://i.ibb.co/StCVRPw/food-background.jpg');
+    background-attachment: fixed;
     padding: 5em 3em;
 
     min-height: 500px;
@@ -21,15 +22,23 @@
 }
 
 .hero-contents {
-    margin-top: 80px;
+    margin-top: 70px;
     max-width: 1000px;
     padding: 0 4em;
     margin-inline: auto;
 }
 
+
+
 @media (min-width: 768px) {
+
+    .hero {
+    
+        min-height: 600px;
+    }
+
     .hero-contents {
-        margin-top: 130px;
+        margin-top: 200px;
     }
     
 }

@@ -2,11 +2,17 @@ import React from 'react';
 import { Form, Button, Col, Row, Container } from 'react-bootstrap';
 
 const ContactUs = () => {
+
+    const style = {
+        maxWidth:'600px',
+        marginInline: 'auto'
+    }
+
     return (
-        <Container>
-            <h2 className='mb-4 text-center'>Want to Showcase Your Recipes in our Website? Contact Us!</h2>
-            <Form>
-                <Row>
+        <Container className='px-5'>
+            <h2 className='mb-4 text-center'>Want to Showcase Your Recipes in Our Website?</h2>
+            <Form style={style}>
+                <Row className='mb-2'>
                     <Col md={6}>
                         <Form.Group controlId="name">
                             <Form.Label>Name:</Form.Label>
