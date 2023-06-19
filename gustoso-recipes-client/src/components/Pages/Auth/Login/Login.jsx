@@ -1,9 +1,9 @@
-import React, { useContext, useState } from 'react';
 import Container from 'react-bootstrap/esm/Container';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../../providers/AuthProvider';
+import { useContext, useState } from 'react';
 
 const Login = () => {
 
@@ -58,7 +58,7 @@ const Login = () => {
 
     return (
 
-        <Container>
+        <Container className='d-flex flex-column justify-content-center align-items-center' style={{minHeight: '80vh'}}>
             <h2 className='text-center mt-5'>Login Here</h2>
             <Form className='w-50 mx-auto' onSubmit={handleOnSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -71,9 +71,11 @@ const Login = () => {
                     <Form.Control type="password" name="password" placeholder="" required />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Form.Group className='text-center'>
+                    <Button variant="primary" type="submit">
                     Login
-                </Button><br />
+                    </Button><br />
+                </Form.Group>
 
                 <Form.Text className="text-danger">
                     {error}
@@ -85,11 +87,11 @@ const Login = () => {
 
                 <br></br>
 
-                <Button variant="outline-danger my-3" onClick={handleGoogleSignIn}>
+                <Button variant="outline-danger my-3 w-100" onClick={handleGoogleSignIn}>
                     Login With Google
                 </Button><br />
 
-                <Button variant="outline-secondary" onClick={handleGitHubSignIn}>
+                <Button variant="outline-secondary w-100" onClick={handleGitHubSignIn}>
                     Login With Github
                 </Button><br />
             </Form>

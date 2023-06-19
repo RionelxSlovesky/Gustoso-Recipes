@@ -5,9 +5,9 @@ import Footer from '../../Shared/Footer/Footer';
 
 const Auth = () => {
     return (
-        <div>
+        <div className='d-flex flex-column' style={{minHeight:'100vh'}}>
             <Navbar></Navbar>
-            <div style={{marginBottom:'60px'}}>
+            <div className='flex-grow-1'>
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>

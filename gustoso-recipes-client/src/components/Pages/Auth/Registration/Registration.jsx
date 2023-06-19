@@ -1,9 +1,9 @@
-import React, { useContext, useState } from 'react';
 import Container from 'react-bootstrap/esm/Container';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../../providers/AuthProvider';
+import { useContext, useState } from 'react';
 
 const Registration = () => {
 
@@ -61,7 +61,7 @@ const Registration = () => {
     }
 
     return (
-        <Container>
+        <Container className='d-flex flex-column justify-content-center align-items-center' style={{minHeight: '80vh'}}>
             <h2 className='text-center mt-5'>Register Here</h2>
             <Form className='w-50 mx-auto' onSubmit={handleOnSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -79,26 +79,30 @@ const Registration = () => {
                     <Form.Control type="password" name="password" required />
                 </Form.Group>
 
-                <Form.Text className="text-danger">
-                    {error}
-                </Form.Text>
-
-                <Form.Group className="mb-3" controlId="formBasicPhotoURL">
+                <Form.Group className="" controlId="formBasicPhotoURL">
                     <Form.Label>Photo URL</Form.Label>
                     <Form.Control type="text" name="photoURL" placeholder="(optional)" />
                 </Form.Group>
+
+                <Form.Text className="text-danger">
+                    {error}
+                </Form.Text>
 
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" name="checkbox" label="Accept Terms & Conditions" />
                 </Form.Group>
 
+                <Form.Group className='text-center'>
+                    <Button variant="primary" type="submit">
+                    Register
+                    </Button>
+                </Form.Group>
+                
+
                 <Form.Text className="text-danger">
                     {termsError}
                 </Form.Text><br></br>
 
-                <Button variant="primary" type="submit">
-                    Register
-                </Button><br />
                 <Form.Text className="text-muted">
                     Already have an account? <Link to='/auth/login'>Login!</Link>
                 </Form.Text>
